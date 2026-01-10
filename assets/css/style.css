@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville&family=Manrope:wght@400;600&display=swap');
+
+:root {
+  --terracotta: #c45a3a;
+  --gold: #dda744;
+  --paper: #f6f1ea;
+  --charcoal: #1f1f1f;
+}
+
+html, body {
+  background: var(--paper);
+  font-family: 'Libre Baskerville', serif;
+  color: var(--charcoal);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+#MainMenu, header, footer { visibility: hidden; }
+
+/* Hero */
+.hero { padding: 6rem 5rem; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  letter-spacing: 0.3px;
+}
+.hero span { color: var(--terracotta); }
+.gold-underline {
+  width: 180px; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.5rem 0 2rem;
+}
+
+/* UI labels */
+.ui-label {
+  font-family: 'Manrope', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--terracotta);
+  font-size: 0.85rem;
+}
+
+/* Buttons */
+.cta-btn, .btn-primary {
+  padding: 0.9rem 1.8rem;
+  background: var(--terracotta);
+  color: white;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(196,90,58,.35);
+  font-family: 'Manrope', sans-serif;
+}
+.btn-primary:hover { filter: brightness(1.05); }
+
+/* Forms and cards */
+.memory-form {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem;
+  background: rgba(255,255,255,.55);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,.15);
+  border: 1px solid rgba(221,167,68,.35);
+}
+
+.story-card {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 18px;
+  background: var(--paper);
+  border: 1px solid rgba(221,167,68,.6);
+  box-shadow: 0 2px 16px rgba(0,0,0,.15);
+  animation: floatUp .6s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  border: 1px solid rgba(221,167,68,.25);
+  filter: drop-shadow(0 0 6px rgba(221,167,68,.35));
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Shimmer */
+.shimmer {
+  padding: 1.2rem;
+  border-radius: 14px;
+  background: linear-gradient(90deg,#f3e6d8,var(--terracotta),#f3e6d8);
+  background-size: 200%;
+  animation: shimmer 1.5s infinite;
+  color: white;
+  text-align: center;
+}
+@keyframes shimmer { from { background-position: 0%; } to { background-position: 200%; } }
+
+/* Decorative Bengali (headers only) */
+.decorative-bn {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+
+/* Image and halo */
+.rounded { border-radius: 14px; }
+.pin-halo { box-shadow: 0 0 12px rgba(221, 167, 68, 0.6); border-radius: 50%; }
+
+/* Section container */
+.section {
+  padding: 1rem 2rem;
+}
