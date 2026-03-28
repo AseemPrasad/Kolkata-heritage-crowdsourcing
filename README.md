@@ -1,3 +1,4 @@
+
 # 📍 Kolkata Katha — AI-Powered Heritage Crowdsourcing Platform
 
 Kolkata Katha is a community-driven archive that preserves the *hidden heritage* of Kolkata.  
@@ -51,5 +52,6 @@ Its a Brand new idea with complete end to end ownership of application with the 
 
 Kolkata Katha is not just an app — it’s a living museum.
 By blending community contributions with AI curation, it ensures that the texture of everyday Kolkata — para gossip, tram rides, chai stalls — is preserved for future generations.
+
 
 
